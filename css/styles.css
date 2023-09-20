@@ -4,6 +4,8 @@
   --c-par: #434455;
   --c-bgl: #ffffff;
   --c-logo: #f4f4fd;
+  --c-bg-shadow: #2e2f42b2;
+  --c-hover-header: #404bbf;
 }
 *,
 *::before,
@@ -58,6 +60,9 @@ img {
 /*Header*/
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   display: flex;
@@ -93,6 +98,8 @@ img {
 }
 
 .item-nav {
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav {
   display: inline-block;
@@ -102,11 +109,21 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
 .nav:hover,
 .nav:focus {
-  color: var(--c-brand);
+  color: var(--c-hover-header);
 }
+
+.nav:hover::after,
+.nav:focus::after {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: var(--c-bg-shadow);
+  border-radius: 2px;
+}
+
 .address_style {
   font-style: normal;
   margin-left: auto;
@@ -124,6 +141,8 @@ img {
   line-height: 1.5;
   color: var(--c-par);
   letter-spacing: 0.02em;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header_address:hover,
@@ -136,6 +155,17 @@ img {
 .hero_section {
   background-color: var(--c-bg);
   padding: 188px 0 188px;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 1440рх;
 }
 
 .title-list {
@@ -177,6 +207,7 @@ img {
   background-color: #404bbf;
 }
 .hero-section {
+  background-image: url(/images/people-office.jpg);
   background-color: var(--c-bg);
   color: var(--c-bgl);
   line-height: 1.07;
@@ -207,7 +238,19 @@ img {
 .inform {
   flex-basis: calc((100%-72) / 4);
 }
-
+.pictuare_board {
+  border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+  border-radius: 4px;
+  background: var(--c-logo);
+  flex-shrink: 0;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+.inform_pictuare {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
 .text_section {
   color: var(--c-par);
   letter-spacing: 0.02em;
@@ -233,7 +276,7 @@ img {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--c-bg);
-  margin-bottom: 72px;
+  /* margin-bottom: 72px;*/
 }
 
 .list-specialists {
@@ -271,7 +314,27 @@ img {
   letter-spacing: 0.02em;
   color: var(--c-par);
 }
-
+.social-specialist {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 8px;
+}
+.tiem-social-sp {
+  width: 40px;
+  height: 40px;
+  padding-bottom: 0px;
+  flex-basis: calc((100% - 4 * 24px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  justify-content: center;
+  background-color: var(--c-bgl);
+  flex-grow: 1;
+}
+.link-sp-social {
+  width: 100%;
+  height: 100%;
+}
 /*section-portfolio*/
 .apps-title {
   display: block;
@@ -302,6 +365,12 @@ img {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
+.bord-card:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 /*Footer-section*/
 
 .footer-logo-one {
@@ -336,4 +405,31 @@ img {
   background-color: var(--c-bg);
   padding-top: 100px;
   padding-bottom: 100px;
+}
+.social-footer {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.social-link-f {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-social-f {
+  width: 40px;
+  padding-bottom: 0px;
+  flex-basis: calc((100% - 3 * 16px) / 4);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--c-bgl);
+  flex-grow: 1;
+}
+.iteam-social {
+  padding: 0;
+  margin: 0;
 }
