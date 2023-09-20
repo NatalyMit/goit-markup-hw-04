@@ -429,10 +429,13 @@ img {
   color: var(--c-bgl);
   margin-top: 0px;
   padding-top: 0px;
+  align-items: center;
+  justify-content: center;
 }
 .social-link-f {
   margin-top: 16px;
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 16px;
   border-radius: 0px 0px 4px 4px;
