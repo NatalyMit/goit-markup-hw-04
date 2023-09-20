@@ -116,11 +116,14 @@ img {
 
 .nav:hover::after,
 .nav:focus::after {
+  display: block;
+  content: '';
   position: absolute;
   left: 0;
   bottom: -1px;
+  width: 48px;
   height: 4px;
-  background-color: var(--c-bg-shadow);
+  background-color: var(--c-hover-header);
   border-radius: 2px;
 }
 
@@ -372,7 +375,16 @@ img {
 }
 
 /*Footer-section*/
+.footer-section {
+  background-color: var(--c-bg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
+.footer-text-container {
+  display: inline-block;
+  padding-right: 120px;
+}
 .footer-logo-one {
   display: inline-block;
   margin-bottom: 16px;
@@ -389,7 +401,6 @@ img {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.17;
   color: var(--c-logo);
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -400,29 +411,37 @@ img {
   color: var(--c-logo);
   line-height: 1.5;
   letter-spacing: 0.2;
+  margin: 0;
 }
-.footer-section {
-  background-color: var(--c-bg);
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+
 .social-footer {
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
+.footer-links-container {
+  display: inline-block;
+  padding-bottom: 32px;
+  padding-top: 0;
+  margin-bottom: 100px;
+}
+.hero-footer {
+  color: var(--c-bgl);
+  margin-top: 0px;
+  padding-top: 0px;
+}
 .social-link-f {
   margin-top: 16px;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-social-f {
   width: 40px;
   padding-bottom: 0px;
-  flex-basis: calc((100% - 3 * 16px) / 4);
+  flex: calc((100% - 3 * 16px) / 4);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
   justify-content: center;
