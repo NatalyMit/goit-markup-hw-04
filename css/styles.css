@@ -117,8 +117,8 @@ img {
   color: var(--c-hover-header);
 }
 
-.nav .activ:hover::after,
-.nav .activ:focus::after {
+.activ:hover::after,
+.activ:focus::after {
   display: block;
   content: '';
   position: absolute;
