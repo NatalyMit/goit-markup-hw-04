@@ -107,6 +107,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav .activ {
   color: var(--c-hover-header);
@@ -414,7 +415,6 @@ img {
   background-color: var(--c-brand);
   width: 100%;
   height: 100%;
-  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
