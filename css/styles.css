@@ -376,18 +376,21 @@ img {
 }
 
 .item-card {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: calc((100% - 48px) / 3);
+}
+.item-card:hover {
+  border: 1px solid var(--CLOUD, #f4f4fd);
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .bord-card {
   padding: 32px 16px;
   margin-bottom: 8px;
   border: 1px solid #e7e9fc;
   border-top: none;
-}
-.bord-card:hover {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 /*Footer-section*/
