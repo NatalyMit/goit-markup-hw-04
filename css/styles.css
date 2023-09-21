@@ -103,18 +103,21 @@ img {
   display: inline-block;
   padding: 24px 0;
   font-weight: 500;
-  color: var(--c-brand);
+  color: var(--c-bg);
   line-height: 1.5;
   letter-spacing: 0.02em;
   position: relative;
+}
+.nav .activ {
+  color: var(--c-hover-header);
 }
 .nav:hover,
 .nav:focus {
   color: var(--c-hover-header);
 }
 
-.nav:hover::after,
-.nav:focus::after {
+.activ:hover::after,
+.activ:focus::after {
   display: block;
   content: '';
   position: absolute;
@@ -301,11 +304,10 @@ img {
   gap: 32px;
   background-color: var(--c-bgl);
   flex-grow: 1;
-}
-.pictuare-specialist {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .cont_name {
   padding: 32px 0;
   text-align: center;
@@ -439,7 +441,7 @@ img {
 
 .footer-text-container {
   display: inline-block;
-  padding-right: 120px;
+  margin-right: 120px;
 }
 .footer-logo-one {
   display: inline-block;
