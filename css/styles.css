@@ -45,7 +45,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0;
+  margin: 0 auto;
 }
 .section {
   padding-top: 120px;
@@ -219,6 +219,7 @@ img {
   color: var(--c-bgl);
   line-height: 1.07;
   letter-spacing: 0.02em;
+  margin: 0 auto;
 }
 /*End hero section*/
 
